@@ -1,13 +1,13 @@
-package com.shop.springshoppingdemo;
+package com.shop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringShoppingDemoApplication {
+public class ShopApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringShoppingDemoApplication.class, args);
+		SpringApplication.run(ShopApplication.class, args);
 	}
 
 }
