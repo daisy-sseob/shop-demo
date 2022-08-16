@@ -1,13 +1,13 @@
 package com.shop.entity;
 
 import com.shop.constant.ItemSellStatus;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter @Setter
+@Builder @NoArgsConstructor @AllArgsConstructor
 @Entity
 public class Item {
 
@@ -34,4 +34,18 @@ public class Item {
 	
 	private LocalDateTime regTime; // 등록 시간
 	private LocalDateTime updateTime; // 수정 시간
+
+	@Override
+	public String toString() {
+		return "Item{" +
+				"id=" + id +
+				", itemNm='" + itemNm + '\'' +
+				", price=" + price +
+				", stockNumber=" + stockNumber +
+				", itemDetail='" + itemDetail + '\'' +
+				", itemSellStatus=" + itemSellStatus +
+				", regTime=" + regTime +
+				", updateTime=" + updateTime +
+				'}';
+	}
 }
