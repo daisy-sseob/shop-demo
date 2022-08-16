@@ -85,4 +85,19 @@ class ItemRepositoryTest {
 		List<Item> items = itemRepository.findByPriceLessThanOrderByPriceDesc(10006);
 		items.forEach(System.out::println);
 	}
+	
+	@Test
+	@DisplayName("JPQL을 이용한 상품 상세 조회 테스트")
+	public void findByItemDetailJPQLTest() {
+		this.createItemList();
+		List<Item> items = itemRepository.findByItemDetail("다양한 크기가 있습니다.7");
+		assertEquals("루셀로사 에서 만든 칫솔 입니다. S, M, L 다양한 크기가 있습니다.7", items.get(0).getItemDetail());
+	}
+	@Test
+	@DisplayName(" Native query를 이용한 상품 상세 조회 테스트")
+	public void findByItemDetailNativeQueryTest() {
+		this.createItemList();
+		List<Item> items = itemRepository.findByItemDetailNative("다양한 크기가 있습니다.7");
+		assertEquals("루셀로사 에서 만든 칫솔 입니다. S, M, L 다양한 크기가 있습니다.7", items.get(0).getItemDetail());
+	}
 }
