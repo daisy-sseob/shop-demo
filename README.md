@@ -5,8 +5,12 @@
 
 ## 프로젝트
 
-- Database : mysql 8.0.30
+- Docker
+```
+$ docker run --name shopping-mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:lastest
+```
 
+- Create database : mysql 8.0.30
 ```
 $ create database shop default character set utf8 collate utf8_general_ci;
 ```
