@@ -25,6 +25,17 @@ public class MemberController {
 		this.memberService = memberService;
 		this.passwordEncoder = passwordEncoder;
 	}
+	
+	@GetMapping("/login")
+	public String loginMember() {
+		return "/member/memberLoginForm";
+	}
+
+	@GetMapping("/login/error")
+	public String loginError(Model model) {
+		model.addAttribute("loginErrorMsg", "아이디 또는 비밀번호를 확인해 주세요.");
+		return "/member/memberLoginForm";
+	}
 
 	@GetMapping("/new")
 	public String memberForm(Model model) {
