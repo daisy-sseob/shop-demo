@@ -7,7 +7,6 @@ import lombok.Setter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
-import javax.print.attribute.standard.PrinterURI;
 
 @Entity
 @Getter @Setter
