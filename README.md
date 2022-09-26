@@ -7,14 +7,14 @@
 
 - Docker
 ```
-$ docker run --name shopping-mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:lastest
+$ docker run --name shopping-mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0
 
 $ docker exec -it shopping-mysql bash
 
 $ mysql -u root -p
 ```
 
-- Create database : mysql 8.0.30
+- Create database : mysql 8.0
 ```
 $ create database shop default character set utf8 collate utf8_general_ci;
 
