@@ -7,11 +7,11 @@
 
 - Docker
 ```
-$ docker run --name shopping-mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0
+$ docker run --name shopping-mysql -e MYSQL_ROOT_PASSWORD=1234 -d -p 3306:3306 mysql:8.0
 
 $ docker exec -it shopping-mysql bash
 
-$ mysql -u root -p
+$ mysql -u root -p1
 ```
 
 - Create database : mysql 8.0
